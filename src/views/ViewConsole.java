@@ -3,13 +3,13 @@ package views;
 import Models.Persona;
 
 public class ViewConsole {
-    public void prinrArrayPersons(Persona[] personas){
-
-
+    public void printArrayPersons(Persona[] personas) {
+        for (Persona p : personas) {
+            System.out.println(p);
+        }
     }
 
-    public void printMessage(String message){
-
+    public void printMessage(String message) {
+        System.out.println(message);
     }
-    
 }

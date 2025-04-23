@@ -23,14 +23,33 @@ public class App {
         ViewConsole vC= new ViewConsole();
 
         vC.printMessage("Arreglo personas");
-        vC.prinrArrayPersons(personas);
+        vC.printArrayPersons(personas);
 
         vC.printMessage("Arreglo Ordeado por insercion");
 
         pC.ordenarPorEdad(personas);
-        vC.prinrArrayPersons(personas);
+        vC.printArrayPersons(personas);
+
+        vC.printMessage("Buscar persona con edad 40");
+
+        Persona personaBuscada=pC.buscarPorEdad(personas, 40);
+        if(personaBuscada==null){
+            vC.printMessage("No se encontro la persona con edad 40");
+        }else{
+            vC.printMessage("Se encontro la persona con edad 40");
+            vC.printMessage(personaBuscada.toString());
+        }
+        vC.printMessage("Buscar persona con edad 99");
+
+        Persona personaBuscada2=pC.buscarPorEdad(personas, 99);
+        if(personaBuscada2==null){
+            vC.printMessage("No se encontro la persona con edad 99");
+        }else{
+            vC.printMessage("Se encontro la persona con edad 99");
+            vC.printMessage(personaBuscada2.toString());
 
     }
+}
 }
         
 
